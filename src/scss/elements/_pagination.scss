@@ -1,0 +1,84 @@
+// .pagination {
+//   @include flexCCenter;
+//   column-gap: 40px;
+
+//   &__item {
+//     @extend %regular18;
+//     color: $green;
+//     cursor: pointer;
+//     position: relative;
+//     z-index: 1;
+
+//     &::before {
+//       content: '';
+//       position: absolute;
+//       left: 50%;
+//       top: 50%;
+//       z-index: -1;
+//       transform: translate(-50%, -50%);
+//       border-radius: 20px;
+//       background: $white;
+//       box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+//       color: $green;
+//       width: 40px;
+//       height: 40px;
+//       flex-shrink: 0;
+//       @include flexCCenter;
+//       display: none;
+//     }
+
+//     &:hover {
+//       &::before {
+//         @include flex;
+//       }
+//     }
+
+//     &.active {
+//       border-radius: 20px;
+//       background: var(--2, linear-gradient(90deg, #02B45E 1.97%, #71CB3A 96.94%));
+//       box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+//       color: $white;
+//       width: 40px;
+//       height: 40px;
+//       flex-shrink: 0;
+//       @include flexCCenter;
+
+//       &:hover {
+//         &::before {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+
+//   &__arrow {
+//     @include bgcover;
+//     width: 24px;
+//     height: 24px;
+//     flex-shrink: 0;
+//     cursor: pointer;
+//     @include transition(background-image);
+
+//     &-prev {
+//       background-image: url(../img/svg/arrows/pag-left.svg);
+
+//       &:hover {
+//         background-image: url(../img/svg/arrows/pag-left-active.svg);
+//       }
+//     }
+
+//     &-next {
+//       background-image: url(../img/svg/arrows/pag-right.svg);
+
+//       &:hover {
+//         background-image: url(../img/svg/arrows/pag-right-active.svg);
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: $mob) {
+//   .pagination {
+//     column-gap: 18px;
+//   }
+// }

@@ -1,0 +1,30 @@
+.container {
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+}
+
+.section {
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+@media screen and (max-width: $laptop) {
+    .section {
+        margin-top: 64px;
+        margin-bottom: 64px;
+    }
+}
+
+@media screen and (max-width: $tablet) {}
+
+@media screen and (max-width: $mob) {
+    .container {
+        padding: 0 16px;
+    }
+
+    .section {
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+}
