@@ -1,3 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: $dark;
+}
+
 .container {
     margin: 0 auto;
     padding: 0 var(--container-offset);
@@ -5,8 +13,7 @@
 }
 
 .section {
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 80px;
 }
 
 @media screen and (max-width: $laptop) {
@@ -21,10 +28,5 @@
 @media screen and (max-width: $mob) {
     .container {
         padding: 0 16px;
-    }
-
-    .section {
-        margin-top: 40px;
-        margin-bottom: 40px;
     }
 }

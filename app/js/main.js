@@ -300,6 +300,8 @@ swiper__WEBPACK_IMPORTED_MODULE_0__["default"].use([swiper__WEBPACK_IMPORTED_MOD
 const heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.hero-swiper', {
   slidesPerView: 1,
   spaceBetween: 30
+  // slidesPerView: 'auto',
+  // loopedSlides: 1,
   // navigation: {
   //   prevEl: ".block_products__swiper-button-prev",
   //   nextEl: ".block_products__swiper-button-next",
@@ -326,6 +328,11 @@ const heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.hero-swi
   //     slidesPerView: 1
   //   },
   // }
+});
+
+const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.products-swiper', {
+  slidesPerView: 5,
+  spaceBetween: 30
 });
 
 /***/ }),
@@ -13722,3 +13729,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map

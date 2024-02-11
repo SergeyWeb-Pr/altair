@@ -9,6 +9,8 @@ Swiper.use([Autoplay, Navigation, Pagination]);
 const heroSwiper = new Swiper('.hero-swiper', {
   slidesPerView: 1,
   spaceBetween: 30,
+  // slidesPerView: 'auto',
+  // loopedSlides: 1,
   // navigation: {
   //   prevEl: ".block_products__swiper-button-prev",
   //   nextEl: ".block_products__swiper-button-next",
@@ -35,4 +37,9 @@ const heroSwiper = new Swiper('.hero-swiper', {
   //     slidesPerView: 1
   //   },
   // }
+});
+
+const productsSwiper = new Swiper('.products-swiper', {
+  slidesPerView: 5,
+  spaceBetween: 30,
 });
