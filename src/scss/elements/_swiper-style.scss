@@ -1,200 +1,58 @@
+.swiper-style {
+    position: relative;
+    overflow: inherit;
 
+    .swiper-slide {
+        @include transition(opacity);
+        opacity: 0;
 
-// .swiper_style {
-//   overflow: inherit;
+        * {
+            box-sizing: border-box;
+        }
 
-//   .swiper-button-prev:after,
-//   .swiper-button-next:after {
-//     display: none;
-//   }
+        &.swiper-slide-visible {
+            opacity: 1;
+        }
+    }
 
-//   .swiper-button-next,
-//   .swiper-button-prev {
-//     top: auto;
-//     bottom: 0px;
-//     width: 48px;
-//     height: 48px;
-//     border-radius: 55px;
-//     box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        display: none;
+    }
 
-//     &:hover {
-//       box-shadow: none;
-//     }
-//   }
+    .swiper-button-next,
+    .swiper-button-prev {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 48px;
+        height: 48px;
+        border-radius: 55px;
+        margin-top: 0;
+        flex-shrink: 0;
+        @include bg-cover;
+        opacity: 1;
+        cursor: pointer;
+        @include transition(background-image);
+    }
 
-//   .swiper-button-prev {
-//     background-image: url(../img/png/arrow-btn-light-left.png);
+    .swiper-button-prev {
+        background-image: url(../img/icons-arrow/arrow-but-right.svg);
+        left: -24px;
 
-//     &:hover {
-//       background-image: url(../img/png/arrow-btn-green-left.png);
-//     }
-//   }
+        &:hover {
+            background-image: url(../img/icons-arrow/arrow-but-left-active.svg);
+        }
+    }
 
-//   .swiper-button-next {
-//     background-image: url(../img/png/arrow-btn-light-right.png);
+    .swiper-button-next {
+        background-image: url(../img/icons-arrow/arrow-but-left.svg);
+        right: -24px;
 
-//     &:hover {
-//       background-image: url(../img/png/arrow-btn-green-right.png);
-//     }
-//   }
+        &:hover {
+            background-image: url(../img/icons-arrow/arrow-but-right-active.svg);
+        }
+    }
+}
 
-//   .swiper_style__bottom {
-//     justify-content: space-between;
-//   }
-
-//   .swiper-pagination {
-//     position: static;
-//     display: flex;
-//     justify-content: center;
-//     column-gap: 16px;
-//     width: fit-content;
-//   }
-
-//   .swiper-pagination-bullet {
-//     opacity: 1;
-//     width: 16px;
-//     height: 16px;
-//     margin: 0 !important;
-//     background: #F5F5FA;
-//     box-shadow: -2px -2px 4px 0px #FFF inset, 2px 2px 4px 0px rgba(170, 170, 204, 0.50) inset, 2px 2px 2px 0px rgba(170, 170, 204, 0.25) inset, -2px -2px 2px 0px rgba(255, 255, 255, 0.50) inset;
-//   }
-
-//   .swiper-pagination-bullet-active {
-//     background: var(--Linear, linear-gradient(90deg, #004D43 1.97%, #02B45E 96.94%));
-//     box-shadow: none;
-//   }
-// }
-
-// .swiper_style {
-//   position: relative;
-
-//   &__bottom {
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     column-gap: 30px;
-//     margin-top: 32px;
-//   }
-
-//   .swiper-button-prev,
-//   .swiper-button-next {
-//     position: static;
-//     margin-top: 0;
-//   }
-// }
-
-// @media screen and (max-width: 576px) {
-//   .swiper_style__bottom {
-//     column-gap: 6px;
-//   }
-
-//   .swiper_style__bottom {
-//     margin-top: 16px;
-//   }
-// }
-
-// // //////////////////////////
-// // //////////////////////////
-// // //////////////////////////
-// // //////////////////////////
-// // //////////////////////////
-
-// .swiper-style {
-//   position: relative;
-//   overflow: inherit;
-
-//   .swiper-slide {
-//     transition: opacity 0.2s ease-in-out;
-//     opacity: 0;
-
-//     * {
-//       box-sizing: border-box;
-//     }
-
-//     &.swiper-slide-visible {
-//       opacity: 1;
-//     }
-//   }
-
-//   &__bottom {
-//     @include flexCCenter;
-//     column-gap: 30px;
-//     margin-top: 40px;
-//   }
-
-//   .swiper-button-prev:after,
-//   .swiper-button-next:after {
-//     display: none;
-//   }
-
-//   .swiper-button-next,
-//   .swiper-button-prev {
-//     position: static;
-//     top: auto;
-//     bottom: 0px;
-//     width: 48px;
-//     height: 48px;
-//     border-radius: 55px;
-//     box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
-//     margin-top: 0;
-//     flex-shrink: 0;
-//     @include bgcover;
-
-//     &:hover {
-//       box-shadow: none;
-//     }
-//   }
-
-//   .swiper-button-prev {
-//     background-image: url(../img/png/arrow-btn-light-left.png);
-
-//     &:hover {
-//       background-image: url(../img/png/arrow-btn-green-left.png);
-//     }
-//   }
-
-//   .swiper-button-next {
-//     background-image: url(../img/png/arrow-btn-light-right.png);
-
-//     &:hover {
-//       background-image: url(../img/png/arrow-btn-green-right.png);
-//     }
-//   }
-
-//   .swiper-pagination {
-//     position: static;
-//     display: flex;
-//     justify-content: center;
-//     column-gap: 16px;
-//     width: fit-content;
-//   }
-
-//   .swiper-pagination-bullet {
-//     opacity: 1;
-//     width: 16px;
-//     height: 16px;
-//     margin: 0 !important;
-//     background: #F5F5FA;
-//     box-shadow: -2px -2px 4px 0px #FFF inset, 2px 2px 4px 0px rgba(170, 170, 204, 0.50) inset, 2px 2px 2px 0px rgba(170, 170, 204, 0.25) inset, -2px -2px 2px 0px rgba(255, 255, 255, 0.50) inset;
-//   }
-
-//   .swiper-pagination-bullet-active {
-//     background: var(--Linear, linear-gradient(90deg, #004D43 1.97%, #02B45E 96.94%));
-//     box-shadow: none;
-//   }
-// }
-
-// @media screen and (max-width: $mob) {
-//   .swiper-style {
-//     &__bottom {
-//       justify-content: space-between;
-//       margin-top: 16px;
-//     }
-
-//     .swiper-button-next,
-//     .swiper-button-prev {
-//       width: 40px;
-//       height: 40px;
-//     }
-//   }
-// }
+@media screen and (max-width: $mob) {}

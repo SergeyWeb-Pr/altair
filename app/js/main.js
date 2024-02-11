@@ -332,7 +332,12 @@ const heroSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.hero-swi
 
 const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.products-swiper', {
   slidesPerView: 5,
-  spaceBetween: 30
+  spaceBetween: 30,
+  watchSlidesProgress: true,
+  navigation: {
+    prevEl: ".products-swiper__swiper-button-prev",
+    nextEl: ".products-swiper__swiper-button-next"
+  }
 });
 
 /***/ }),

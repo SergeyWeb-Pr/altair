@@ -42,4 +42,9 @@ const heroSwiper = new Swiper('.hero-swiper', {
 const productsSwiper = new Swiper('.products-swiper', {
   slidesPerView: 5,
   spaceBetween: 30,
+  watchSlidesProgress: true,
+  navigation: {
+    prevEl: ".products-swiper__swiper-button-prev",
+    nextEl: ".products-swiper__swiper-button-next",
+  },
 });
