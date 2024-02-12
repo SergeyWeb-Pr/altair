@@ -302,3 +302,37 @@
 //   display: inline-block;
 //   cursor: pointer;
 // }
+
+.button-link {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 125%;
+    color: $green;
+    position: relative;
+    padding-right: 28px;
+    display: inline-block;
+    cursor: pointer;
+
+    &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        background-image: url(../img/icons-arrow/arrow-right.svg);
+        @include bg-cover;
+        @include transition(background-image);
+    }
+
+    &:hover {
+        color: #A5C81A;
+        @include transition(color);
+
+        &::before {
+            background-image: url(../img/icons-arrow/arrow-right-active.svg);
+        }
+
+    }
+}

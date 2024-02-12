@@ -281,7 +281,12 @@ const mobileCheck = () => {
   \***********************************/
 /***/ (() => {
 
-$(document).ready(function () {});
+$(document).ready(function () {
+  $('.js-catalog-preview-button').click(function () {
+    $(this).addClass('hide');
+    $(this).siblings('.js-catalog-preview-text').addClass('show');
+  });
+});
 
 /***/ }),
 
@@ -337,6 +342,15 @@ const productsSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.prod
   navigation: {
     prevEl: ".products-swiper__swiper-button-prev",
     nextEl: ".products-swiper__swiper-button-next"
+  }
+});
+const articleSwiper = new swiper__WEBPACK_IMPORTED_MODULE_0__["default"]('.article-swiper', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  watchSlidesProgress: true,
+  navigation: {
+    prevEl: ".article-swiper__swiper-button-prev",
+    nextEl: ".article-swiper__swiper-button-next"
   }
 });
 

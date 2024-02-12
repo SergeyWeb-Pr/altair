@@ -1,6 +1,7 @@
 .header {
     padding-top: 20px;
     padding-bottom: 20px;
+    border-bottom: 1px solid $border-grey;
 
     &__container {
         display: grid;
@@ -44,4 +45,8 @@
         text-decoration: underline;
         color: $green;
     }
+}
+
+.main .header {
+    border-bottom: none;
 }

@@ -48,3 +48,12 @@ const productsSwiper = new Swiper('.products-swiper', {
     nextEl: ".products-swiper__swiper-button-next",
   },
 });
+const articleSwiper = new Swiper('.article-swiper', {
+  slidesPerView: 4,
+  spaceBetween: 30,
+  watchSlidesProgress: true,
+  navigation: {
+    prevEl: ".article-swiper__swiper-button-prev",
+    nextEl: ".article-swiper__swiper-button-next",
+  },
+});

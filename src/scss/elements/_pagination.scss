@@ -1,84 +1,56 @@
-// .pagination {
-//   @include flexCCenter;
-//   column-gap: 40px;
+.pagination {
+    @include flexCCenter;
+    column-gap: 12px;
 
-//   &__item {
-//     @extend %regular18;
-//     color: $green;
-//     cursor: pointer;
-//     position: relative;
-//     z-index: 1;
+    &__item {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 150%;
+        color: $dark;
+        position: relative;
+        z-index: 1;
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        @include flexCCenter;
+        cursor: pointer;
+        border: 1px solid $border-grey;
+        border-radius: 24px;
+        transition: color 0.2s ease-in-out, border 0.2s ease-in-out;
 
-//     &::before {
-//       content: '';
-//       position: absolute;
-//       left: 50%;
-//       top: 50%;
-//       z-index: -1;
-//       transform: translate(-50%, -50%);
-//       border-radius: 20px;
-//       background: $white;
-//       box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
-//       color: $green;
-//       width: 40px;
-//       height: 40px;
-//       flex-shrink: 0;
-//       @include flexCCenter;
-//       display: none;
-//     }
+        &.active {
+            color: $green;
+            border: 1px solid $green;
+        }
 
-//     &:hover {
-//       &::before {
-//         @include flex;
-//       }
-//     }
+        &:hover {
+            color: $green;
+            border: 1px solid $green;
+        }
+    }
 
-//     &.active {
-//       border-radius: 20px;
-//       background: var(--2, linear-gradient(90deg, #02B45E 1.97%, #71CB3A 96.94%));
-//       box-shadow: 10px 10px 20px 0px rgba(170, 170, 204, 0.50), 5px 5px 10px 0px rgba(170, 170, 204, 0.25), -5px -5px 10px 0px rgba(255, 255, 255, 0.50);
-//       color: $white;
-//       width: 40px;
-//       height: 40px;
-//       flex-shrink: 0;
-//       @include flexCCenter;
+    &__arrow {
+        @include bg-cover;
+        width: 48px;
+        height: 48px;
+        flex-shrink: 0;
+        cursor: pointer;
+        @include transition(background-image);
 
-//       &:hover {
-//         &::before {
-//           display: none;
-//         }
-//       }
-//     }
-//   }
+        &-prev {
+            background-image: url(../img/icons-arrow/arrow-but-right.svg);
 
-//   &__arrow {
-//     @include bgcover;
-//     width: 24px;
-//     height: 24px;
-//     flex-shrink: 0;
-//     cursor: pointer;
-//     @include transition(background-image);
+            &:hover {
+                background-image: url(../img/icons-arrow/arrow-but-left-active.svg);
+            }
+        }
 
-//     &-prev {
-//       background-image: url(../img/svg/arrows/pag-left.svg);
+        &-next {
+            background-image: url(../img/icons-arrow/arrow-but-left.svg);
 
-//       &:hover {
-//         background-image: url(../img/svg/arrows/pag-left-active.svg);
-//       }
-//     }
-
-//     &-next {
-//       background-image: url(../img/svg/arrows/pag-right.svg);
-
-//       &:hover {
-//         background-image: url(../img/svg/arrows/pag-right-active.svg);
-//       }
-//     }
-//   }
-// }
-
-// @media screen and (max-width: $mob) {
-//   .pagination {
-//     column-gap: 18px;
-//   }
-// }
+            &:hover {
+                background-image: url(../img/icons-arrow/arrow-but-right-active.svg);
+            }
+        }
+    }
+}
