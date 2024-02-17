@@ -60,6 +60,88 @@
     }
 }
 
+.sidebar-menu {
+    &__head {
+        width: 100%;
+        height: 60px;
+        padding: 20px 24px;
+        background-color: $green;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 125%;
+        color: $white;
+    }
+
+    &__body {
+        background-color: $white;
+        border: 1px solid $border-grey;
+        padding: 16px 0;
+
+        ul {
+            li {
+
+                a {
+                    font-size: 15px;
+                    line-height: 120%;
+                    color: $dark;
+                }
+            }
+
+            .menu-item {
+                position: relative;
+
+                &.active {
+                    // padding-bottom: 16px;
+                }
+
+                &__inner {
+                    @include flexCBetween;
+                    column-gap: 20px;
+                    padding: 8px 24px;
+
+                    &.active {
+                        background-color: $green-active;
+                    }
+                }
+
+                a {
+                    &.active {
+                        // font-weight: 700;
+                    }
+                }
+            }
+
+            .menu-icon {
+                background-image: url(../img/icons/menu-plus.svg);
+                @include bg-cover;
+                border-radius: 24px;
+                width: 26px;
+                height: 26px;
+                flex-shrink: 0;
+                cursor: pointer;
+
+                &.hide {
+                    background-image: url(../img/icons/menu-minus.svg);
+                }
+            }
+
+            .sub-menu {
+                opacity: 0;
+                visibility: hidden;
+                height: 0;
+                // margin-top: 0;
+
+                &.show {
+                    opacity: 1;
+                    visibility: visible;
+                    height: auto;
+                    // margin-top: 16px;
+                }
+            }
+        }
+    }
+}
+
 .hero-swiper {
     margin-left: 0;
     margin-right: 0;
@@ -149,7 +231,7 @@
                 box-shadow: 0px 4px 20px 0px #DDDDDD;
                 padding-bottom: 60px;
                 margin-bottom: -60px;
-                z-index: 1;
+                z-index: 2;
 
                 .products-swiper__item-button {
                     visibility: visible;

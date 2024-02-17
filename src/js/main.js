@@ -6,6 +6,7 @@ import './_components';
 //scripts
 import './scripts/swiper.js';
 import './scripts/scripts.js';
+import './scripts/menu.js';
 
 
 // class ItcAccordion {

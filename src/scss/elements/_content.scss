@@ -1,6 +1,6 @@
 .content {
     font-size: 16px;
-    line-height: 200%;
+    line-height: 150%;
 
     p {
         @include mb(16px);
@@ -15,6 +15,25 @@
 
         &:not(:last-child) {
             margin-top: 40px;
+        }
+    }
+
+    ul {
+        li {
+            padding-left: 20px;
+            position: relative;
+            @include mb(12px);
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 5px;
+                height: 5px;
+                border-radius: 50%;
+                background-color: $dark;
+                left: 0;
+                top: 10px;
+            }
         }
     }
 }

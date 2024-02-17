@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="css/main.css">
   <script defer src="js/main.js"></script>
   <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body class="page__body main">
@@ -46,8 +47,163 @@
     <main class="main">
       <section class="section hero">
     <div class="container hero__container">
-        <div class="hero__sidebar">
-            111111111111
+        <div class="hero__sidebar sidebar-menu">
+            <div class="sidebar-menu__head">Все категории</div>
+            <div class="sidebar-menu__body">
+                <ul class="sub-menu">
+                    <li class="menu-item">
+                        <div class="menu-item__inner">
+                            <a href="/">Датчики точки росы</a>
+                            <div class="menu-icon"></div>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item__inner">
+                            <a href="/">Фильтры и фильтроэлементы</a>
+                            <div class="menu-icon"></div>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item__inner">
+                            <a href="/">Электроника и Эллектроснабжение</a>
+                            <div class="menu-icon"></div>
+                        </div>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <div class="menu-item__inner">
+                                    <a href="/">Контроллеры</a>
+                                    <div class="menu-icon"></div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-item__inner">
+                                    <a href="/">Стабилизаторы напряжения</a>
+                                    <div class="menu-icon"></div>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li class="menu-item">
+                                        <div class="menu-item__inner">
+                                            <a href="/">ЭНЕРГИЯ</a>
+                                            <div class="menu-icon"></div>
+                                        </div>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <div class="menu-item__inner">
+                                                    <a href="/">ЭНЕРГИЯ</a>
+                                                    <div class="menu-icon"></div>
+                                                </div>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item">
+                                                        <div class="menu-item__inner">
+                                                            <a href="/">ЭНЕРГИЯ</a>
+                                                            <div class="menu-icon"></div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item__inner">
+                            <a href="/">Заточка инструмента</a>
+                            <div class="menu-icon"></div>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item__inner">
+                            <a href="/">Станки и оборудование</a>
+                            <div class="menu-icon"></div>
+                        </div>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <div class="menu-item__inner">
+                                    <a href="/">Сверлильные станки</a>
+                                    <div class="menu-icon"></div>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li class="menu-item">
+                                        <a href="/">Настольные сверлильные станки</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/">Напольные сверлильные станки</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/">Радиально сверлильные станки</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/">Сверлильные станки на магнитном основании </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Токарные станки
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Напольные токарные станки </a></li>
+                                    <li class="menu-item"><a href="/">Настольный токарные станки </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Фрезерные станки</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Настольные фрезерные станки </a></li>
+                                    <li class="menu-item"><a href="/">Настольные фрезерные станки с ЧПУ </a></li>
+                                    <li class="menu-item"><a href="/">Широко-универсальные фрезерные станки </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Заточные и шлифовальные </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Настольные</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Пилы </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Ленточнопильные станки </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Оснастка </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Крепёжная оснастка </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Сварочное оборудование </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Аргоно-Дуговая TIG-сварка </a></li>
+                                    <li class="menu-item"><a href="/">Инверторы MMA-сварки </a></li>
+                                    <li class="menu-item">
+                                        <a href="/">Контактная сварка </a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="/">Машины контактной точечной сварки с радиальным ходом
+                                                    верхнего электрода</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item"><a href="/">Плазменная резка с пневмоподжигом </a></li>
+                                    <li class="menu-item"><a href="/">Плазменные резаки </a></li>
+                                    <li class="menu-item"><a href="/">Полуавтоматическая MIG-MAG сварка </a></li>
+                                    <li class="menu-item"><a href="/">Полуавтоматы с синергией и пульсом для Алюминия
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Профилегибы и трубогибы </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Гидравлические профилегибы </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Оборудование для ковки </a></li>
+                            <li class="menu-item"><a href="/">Деревообработка</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Круглопильные станки </a></li>
+                                    <li class="menu-item"><a href="/">Токарные станки по дереву </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="hero__content">
             <div class="swiper hero-swiper">

@@ -1,10 +1,12 @@
 // Подключение свайпера
-import Swiper, {
-  Autoplay,
-  Navigation,
-  Pagination,
-} from 'swiper';
-Swiper.use([Autoplay, Navigation, Pagination]);
+// import Swiper, {
+//   Autoplay,
+//   Navigation,
+//   Pagination,
+//   Thumbs,
+//   Controller,
+// } from 'swiper';
+// Swiper.use([Autoplay, Navigation, Pagination, Thumbs, Controller]);
 
 const heroSwiper = new Swiper('.hero-swiper', {
   slidesPerView: 1,
@@ -55,5 +57,26 @@ const articleSwiper = new Swiper('.article-swiper', {
   navigation: {
     prevEl: ".article-swiper__swiper-button-prev",
     nextEl: ".article-swiper__swiper-button-next",
+  },
+});
+// 
+// 
+// 
+
+var productSingleThumbSwiper = new Swiper(".product-single-thumb-swiper", {
+  spaceBetween: 10,
+  slidesPerView: 4,
+  direction: 'vertical',
+  freeMode: false,
+  watchSlidesProgress: true,
+});
+var productSingleSwiper = new Swiper(".product-single-swiper", {
+  spaceBetween: 10,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  thumbs: {
+    swiper: productSingleThumbSwiper,
   },
 });

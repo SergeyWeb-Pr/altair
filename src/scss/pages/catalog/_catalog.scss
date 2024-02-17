@@ -52,6 +52,19 @@
         grid-column: 1/4;
         margin-top: 10px;
     }
+
+    .contact-form {
+        margin-top: 40px;
+        margin-bottom: 80px;
+
+        &__content {
+            padding: 48px 56px;
+        }
+
+        .form {
+            column-gap: 8px;
+        }
+    }
 }
 
 .catalog-info {
