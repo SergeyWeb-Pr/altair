@@ -28,7 +28,7 @@
       <img loading="lazy" src="img/logo/logo.png" class="image" width="" height="" alt="">
     </a>
     <div class="header__content">
-      <nav class="nav header__nav" title="">
+      <nav class="nav header__nav" title="" data-menu>
         <ul class="list-reset nav__list">
           <li class="nav__item"><a href="#" class="nav__link">О магазине</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Как купить</a></li>
@@ -39,9 +39,12 @@
       </nav>
       <div class="header__right">
         <a href="tel:8 (925) 000-58-58" class="header__tel tel">8 (925) 000-58-58</a>
-        <button class="header__button btn-reset">Обратный звонок</button>
+        <button class="header__button btn-reset" data-graph-path="price">Обратный звонок</button>
       </div>
     </div>
+    <button class="btn-reset burger header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
     <main class="main">
@@ -105,8 +108,42 @@
         </ul>
       </nav>
     </div>
+    <div class="footer__copy">©Altair. При использовании материалов с сайта обязательно указание прямой ссылки на
+      источник.</div>
   </div>
 </footer>
+
+<div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="price">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="contact-form">
+        <div class="contact-form__content">
+          <h2 class="contact-form__title form__title h2">Хотите уточнить цену?</h2>
+          <div class="contact-form__subtitle form__subtitle">Оставьте заявку, и мы вам перезвоним.</div>
+          <form action="#" class="form">
+            <label class="form__label">
+              <input type="text" name="Имя" class="input-reset form__input" placeholder="Введите ваше имя">
+            </label>
+            <label class="form__label">
+              <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (000)-000-00-00">
+            </label>
+            <label class="form__label">
+              <input type="text" name="Имя" class="input-reset form__input" placeholder="Введите email">
+            </label>
+            <button class="btn-reset form__btn">Отправить</button>
+          </form>
+          <div class="form__descr contact-form__descr">
+            Нажимая на кнопку «Отправить», я принимаю <a href="#">политику конфиденциальности</a> и
+            соглашаюсь с
+            обработкой
+            персональных данных
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
 </body>
 

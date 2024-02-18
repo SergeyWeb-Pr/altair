@@ -1,31 +1,35 @@
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 body {
-    color: $dark;
+	color: $dark;
 }
 
 .container {
-    margin: 0 auto;
-    padding: 0 var(--container-offset);
-    max-width: var(--container-width);
+	margin: 0 auto;
+	padding: 0 var(--container-offset);
+	max-width: var(--container-width);
 }
 
 .section {
-    margin-bottom: 80px;
+	margin-bottom: 80px;
 }
 
 @media screen and (max-width: $laptop) {
-    .section {
-        margin-bottom: 64px;
-    }
+	.section {
+		margin-bottom: 64px;
+	}
 }
 
-@media screen and (max-width: $tablet) {}
+@media screen and (max-width: $tablet) {
+	.container {
+		padding: 0 16px;
+	}
+}
 
 @media screen and (max-width: $mob) {
-    .container {
-        padding: 0 16px;
-    }
+	.section {
+		margin-bottom: 40px;
+	}
 }

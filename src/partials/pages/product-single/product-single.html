@@ -109,15 +109,17 @@
                 <div class="product-single__info-result">
                     <div class="product-single__info-calc">
                         <button
-                            class="btn-reset product-single__info-calc-button product-single__info-calc-decrease"></button>
-                        <div class="product-single__info-calc-result">1</div>
+                            class="btn-reset product-single__info-calc-button product-single__info-calc-decrease js-info-calc-decrease"></button>
+                        <div class="product-single__info-calc-result js-info-calc-result">1</div>
                         <button
-                            class="btn-reset product-single__info-calc-button product-single__info-calc-increase active"></button>
+                            class="btn-reset product-single__info-calc-button product-single__info-calc-increase active js-info-calc-increase"></button>
                     </div>
-                    <div class="product-single__info-price">59 000 <span>₽</span></div>
+                    <div class="product-single__info-price">
+                        <div class="js-info-calc-price">59000</div><span>₽</span>
+                    </div>
                 </div>
                 <div class="product-single__info-button"></div>
-                <div class="icon-button product-single__info-button">
+                <div class="icon-button product-single__info-button" data-graph-path="price">
                     <div class="icon-button__inner">
                         <img loading="lazy" src="img/icons/icon-shop.svg" class="image" width="" height="" alt="">
                         <span>Заказать</span>

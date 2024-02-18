@@ -55,4 +55,23 @@
     }
 }
 
-@media screen and (max-width: $mob) {}
+@media screen and (max-width: $mob) {
+    .swiper-style {
+        padding-bottom: 60px;
+
+        .swiper-button-next,
+        .swiper-button-prev {
+            top: auto;
+            bottom: 0;
+            transform: none;
+        }
+
+        .swiper-button-prev {
+            left: 0;
+        }
+
+        .swiper-button-next {
+            right: 0;
+        }
+    }
+}

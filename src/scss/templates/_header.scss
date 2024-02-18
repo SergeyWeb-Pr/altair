@@ -1,52 +1,166 @@
 .header {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid $border-grey;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-bottom: 1px solid $border-grey;
+	position: relative;
+	background-color: $white;
 
-    &__container {
-        display: grid;
-        grid-template-columns: 1fr 3fr;
-        column-gap: 30px;
-    }
+	&.active {
+		z-index: 1001;
+	}
 
-    &__logo {
-        width: 251px;
-        height: 35px;
-        flex-shrink: 0;
+	&__container {
+		display: grid;
+		grid-template-columns: 1fr 3fr;
+		column-gap: 30px;
+	}
 
-        img {
-            width: 100%;
-            height: 100%;
-        }
-    }
+	&__logo {
+		width: 251px;
+		height: 35px;
+		flex-shrink: 0;
 
-    &__content {
-        @include flexCBetween;
-        column-gap: 87px;
-    }
+		img {
+			width: 100%;
+			height: 100%;
+		}
+	}
 
-    &__right {
-        text-align: right;
-    }
+	&__content {
+		@include flexCBetween;
+		column-gap: 87px;
+	}
 
-    &__tel {
-        color: $dark;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 24px;
-        display: inline-block;
-        margin-bottom: 3px;
-    }
+	&__right {
+		text-align: right;
+	}
 
-    &__button {
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 125%;
-        text-decoration: underline;
-        color: $green;
-    }
+	&__tel {
+		color: $dark;
+		font-weight: 600;
+		font-size: 20px;
+		line-height: 24px;
+		display: inline-block;
+		margin-bottom: 3px;
+	}
+
+	&__button {
+		font-weight: 700;
+		font-size: 16px;
+		line-height: 125%;
+		text-decoration: underline;
+		color: $green;
+	}
+
+	&__burger {
+		display: none;
+	}
+
+	.burger {
+		@include burger
+	}
 }
 
 .main .header {
-    border-bottom: none;
+	border-bottom: none;
+}
+
+@media screen and (max-width: $laptop) {
+	.header {
+		&__container {
+			column-gap: 20px;
+		}
+
+		&__content {
+			column-gap: 20px;
+		}
+	}
+
+	.nav {
+		&__list {
+			column-gap: 20px;
+		}
+	}
+}
+
+@media screen and (max-width: $tablet) {
+	.header {
+		&__container {
+			@include flexCBetween;
+			width: 100%;
+			column-gap: 30px;
+		}
+
+		&__burger {
+			display: block;
+		}
+
+		&__nav {
+			display: none;
+
+			&.menu--active {
+				display: block;
+				position: absolute;
+				left: 0;
+				top: 87px;
+				width: 100%;
+				height: auto;
+				background: $white;
+				z-index: 2;
+
+				.nav__list {
+					flex-direction: column;
+					align-items: flex-start;
+					padding-top: 8px;
+					padding-bottom: 20px;
+				}
+
+				.nav__item {
+					width: 100%;
+					padding: 8px 16px;
+				}
+			}
+		}
+
+		&__content {
+			margin-left: auto;
+		}
+
+		&__right {
+			@include flexColumn;
+			align-items: flex-start;
+		}
+	}
+}
+
+@media screen and (max-width: $mob) {
+	.header {
+		padding-top: 12px;
+		padding-bottom: 12px;
+
+		&__logo {
+			width: 120px;
+			height: auto;
+		}
+
+		&__tel, &__button {
+			font-size: 14px;
+			line-height: 16px;
+		}
+
+		&__container {
+			column-gap: 8px;
+		}
+
+		&__nav {
+			&.menu--active {
+				top: 59px;
+			}
+		}
+
+		.burger {
+			width: 20px;
+			height: 20px;
+		}
+	}
 }

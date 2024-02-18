@@ -28,7 +28,7 @@
       <img loading="lazy" src="img/logo/logo.png" class="image" width="" height="" alt="">
     </a>
     <div class="header__content">
-      <nav class="nav header__nav" title="">
+      <nav class="nav header__nav" title="" data-menu>
         <ul class="list-reset nav__list">
           <li class="nav__item"><a href="#" class="nav__link">О магазине</a></li>
           <li class="nav__item"><a href="#" class="nav__link">Как купить</a></li>
@@ -39,16 +39,174 @@
       </nav>
       <div class="header__right">
         <a href="tel:8 (925) 000-58-58" class="header__tel tel">8 (925) 000-58-58</a>
-        <button class="header__button btn-reset">Обратный звонок</button>
+        <button class="header__button btn-reset" data-graph-path="price">Обратный звонок</button>
       </div>
     </div>
+    <button class="btn-reset burger header__burger" aria-label="Открыть меню" aria-expanded="false" data-burger>
+      <span class="burger__line"></span>
+    </button>
   </div>
 </header>
     <main class="main">
       <section class="section catalog">
     <div class="container catalog__container">
-        <div class="catalog__sidebar">
-            1111
+        <div class="catalog__sidebar sidebar-menu">
+            <div class="sidebar-menu__head">Все категории</div>
+            <div class="sidebar-menu__body">
+                <ul class="sub-menu">
+                    <li class="menu-item">
+                        <div class="menu-item__inner">
+                            <a href="/">Датчики точки росы</a>
+                            <div class="menu-icon"></div>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item__inner">
+                            <a href="/">Фильтры и фильтроэлементы</a>
+                            <div class="menu-icon"></div>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item__inner">
+                            <a href="/">Электроника и Эллектроснабжение</a>
+                            <div class="menu-icon"></div>
+                        </div>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <div class="menu-item__inner">
+                                    <a href="/">Контроллеры</a>
+                                    <div class="menu-icon"></div>
+                                </div>
+                            </li>
+                            <li class="menu-item">
+                                <div class="menu-item__inner">
+                                    <a href="/">Стабилизаторы напряжения</a>
+                                    <div class="menu-icon"></div>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li class="menu-item">
+                                        <div class="menu-item__inner">
+                                            <a href="/">ЭНЕРГИЯ</a>
+                                            <div class="menu-icon"></div>
+                                        </div>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <div class="menu-item__inner">
+                                                    <a href="/">ЭНЕРГИЯ</a>
+                                                    <div class="menu-icon"></div>
+                                                </div>
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item">
+                                                        <div class="menu-item__inner">
+                                                            <a href="/">ЭНЕРГИЯ</a>
+                                                            <div class="menu-icon"></div>
+                                                        </div>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item__inner">
+                            <a href="/">Заточка инструмента</a>
+                            <div class="menu-icon"></div>
+                        </div>
+                    </li>
+                    <li class="menu-item">
+                        <div class="menu-item__inner">
+                            <a href="/">Станки и оборудование</a>
+                            <div class="menu-icon"></div>
+                        </div>
+                        <ul class="sub-menu">
+                            <li class="menu-item">
+                                <div class="menu-item__inner">
+                                    <a href="/">Сверлильные станки</a>
+                                    <div class="menu-icon"></div>
+                                </div>
+                                <ul class="sub-menu">
+                                    <li class="menu-item">
+                                        <a href="/">Настольные сверлильные станки</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/">Напольные сверлильные станки</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/">Радиально сверлильные станки</a>
+                                    </li>
+                                    <li class="menu-item">
+                                        <a href="/">Сверлильные станки на магнитном основании </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Токарные станки
+                                </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Напольные токарные станки </a></li>
+                                    <li class="menu-item"><a href="/">Настольный токарные станки </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Фрезерные станки</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Настольные фрезерные станки </a></li>
+                                    <li class="menu-item"><a href="/">Настольные фрезерные станки с ЧПУ </a></li>
+                                    <li class="menu-item"><a href="/">Широко-универсальные фрезерные станки </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Заточные и шлифовальные </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Настольные</a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Пилы </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Ленточнопильные станки </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Оснастка </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Крепёжная оснастка </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Сварочное оборудование </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Аргоно-Дуговая TIG-сварка </a></li>
+                                    <li class="menu-item"><a href="/">Инверторы MMA-сварки </a></li>
+                                    <li class="menu-item">
+                                        <a href="/">Контактная сварка </a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item">
+                                                <a href="/">Машины контактной точечной сварки с радиальным ходом
+                                                    верхнего электрода</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item"><a href="/">Плазменная резка с пневмоподжигом </a></li>
+                                    <li class="menu-item"><a href="/">Плазменные резаки </a></li>
+                                    <li class="menu-item"><a href="/">Полуавтоматическая MIG-MAG сварка </a></li>
+                                    <li class="menu-item"><a href="/">Полуавтоматы с синергией и пульсом для Алюминия
+                                        </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Профилегибы и трубогибы </a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Гидравлические профилегибы </a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item"><a href="/">Оборудование для ковки </a></li>
+                            <li class="menu-item"><a href="/">Деревообработка</a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item"><a href="/">Круглопильные станки </a></li>
+                                    <li class="menu-item"><a href="/">Токарные станки по дереву </a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
         </div>
         <div class="catalog__content">
             <div class="breadcrumbs">
@@ -425,8 +583,42 @@
         </ul>
       </nav>
     </div>
+    <div class="footer__copy">©Altair. При использовании материалов с сайта обязательно указание прямой ссылки на
+      источник.</div>
   </div>
 </footer>
+
+<div class="graph-modal">
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="price">
+    <button class="btn-reset js-modal-close graph-modal__close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <div class="contact-form">
+        <div class="contact-form__content">
+          <h2 class="contact-form__title form__title h2">Хотите уточнить цену?</h2>
+          <div class="contact-form__subtitle form__subtitle">Оставьте заявку, и мы вам перезвоним.</div>
+          <form action="#" class="form">
+            <label class="form__label">
+              <input type="text" name="Имя" class="input-reset form__input" placeholder="Введите ваше имя">
+            </label>
+            <label class="form__label">
+              <input type="text" name="Имя" class="input-reset form__input" placeholder="+7 (000)-000-00-00">
+            </label>
+            <label class="form__label">
+              <input type="text" name="Имя" class="input-reset form__input" placeholder="Введите email">
+            </label>
+            <button class="btn-reset form__btn">Отправить</button>
+          </form>
+          <div class="form__descr contact-form__descr">
+            Нажимая на кнопку «Отправить», я принимаю <a href="#">политику конфиденциальности</a> и
+            соглашаюсь с
+            обработкой
+            персональных данных
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
 </body>
 

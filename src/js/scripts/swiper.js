@@ -1,16 +1,14 @@
-// Подключение свайпера
-// import Swiper, {
-//   Autoplay,
-//   Navigation,
-//   Pagination,
-//   Thumbs,
-//   Controller,
-// } from 'swiper';
-// Swiper.use([Autoplay, Navigation, Pagination, Thumbs, Controller]);
-
 const heroSwiper = new Swiper('.hero-swiper', {
   slidesPerView: 1,
   spaceBetween: 30,
+  navigation: {
+    prevEl: ".hero-swiper__swiper-button-prev",
+    nextEl: ".hero-swiper__swiper-button-next",
+  },
+  pagination: {
+    el: '.hero-swiper__swiper-pagination',
+    clickable: true,
+  },
   // slidesPerView: 'auto',
   // loopedSlides: 1,
   // navigation: {
@@ -49,6 +47,24 @@ const productsSwiper = new Swiper('.products-swiper', {
     prevEl: ".products-swiper__swiper-button-prev",
     nextEl: ".products-swiper__swiper-button-next",
   },
+  breakpoints: {
+    1367: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+    1201: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    769: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+    },
+  }
 });
 const articleSwiper = new Swiper('.article-swiper', {
   slidesPerView: 4,
@@ -58,10 +74,25 @@ const articleSwiper = new Swiper('.article-swiper', {
     prevEl: ".article-swiper__swiper-button-prev",
     nextEl: ".article-swiper__swiper-button-next",
   },
+  breakpoints: {
+    1367: {
+      slidesPerView: 5,
+      spaceBetween: 30,
+    },
+    1201: {
+      slidesPerView: 4,
+      spaceBetween: 20,
+    },
+    769: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 16,
+    },
+  }
 });
-// 
-// 
-// 
 
 var productSingleThumbSwiper = new Swiper(".product-single-thumb-swiper", {
   spaceBetween: 10,
@@ -69,6 +100,16 @@ var productSingleThumbSwiper = new Swiper(".product-single-thumb-swiper", {
   direction: 'vertical',
   freeMode: false,
   watchSlidesProgress: true,
+  breakpoints: {
+    769: {
+      spaceBetween: 10,
+      slidesPerView: 4,
+    },
+    320: {
+      spaceBetween: 8,
+      slidesPerView: 3,
+    },
+  }
 });
 var productSingleSwiper = new Swiper(".product-single-swiper", {
   spaceBetween: 10,
